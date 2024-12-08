@@ -1,0 +1,24 @@
+<%- include ("/home/ddd/coding/blog/views/partials/header.ejs")%>
+<div class="list-container">
+  <% if (locals.posts) { %>
+  <ul>
+    <% posts.forEach((post) => { %>
+      <li>
+        <%= post %>
+      </li>
+    <% }) %>
+  </ul>
+  <% } %>
+  </div>
+  <div class="input-container">
+  <input class="btn btn-primary rounded-pill px-3" type="submit" value="Edit" id="editPost" />
+  <input class="btn btn-primary rounded-pill px-3" type="submit" value="Delete" id="deletePost" />
+  <input class="btn btn-primary rounded-pill px-3" type="submit" value="Done" id="done" />
+  </div>
+  <form action="/submit" method="POST" id="inputForm">
+    <input type="text" name="newPost" id="inputText"/>
+    <input class="btn btn-primary rounded-pill px-3" type="submit" value="Submit" />
+  </form>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="/js/index.js"></script>
+<%- include ("/home/ddd/coding/blog/views/partials/footer.ejs")%>

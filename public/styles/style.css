@@ -1,0 +1,44 @@
+.nav-container {
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+  background-color: blue;
+  height: 8vh;
+}
+
+.list-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  font-size: 24px;
+  margin: 15px;
+  border: black thin solid;
+  padding: 24px;
+}
+
+#inputForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form > #inputText {
+  height: 20vh;
+  width: 50vh;
+  margin-bottom: 15px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container > input {
+  margin: 15px;
+}
